@@ -1,5 +1,4 @@
-const path              = require('path'),
-      HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry:{
@@ -7,14 +6,9 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, '..', 'dist'),
-        filename: '[name].js'
+	    publicPath: '/',
+	    filename: '[name].js'
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'webpack demo',
-            filename: 'index.html'
-        })
-    ],
     module: {
         rules: [
             {
@@ -28,27 +22,27 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: path.join('static', 'img/[name].[ext]')
-                }
+	            loader: 'file-loader',
+	            options: {
+		            name: 'static/img/[name].[ext]',
+		            publicPath: '../'
+	            }
             },
             {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: path.join('static', 'media/[name].[ext]')
-                }
+	            loader: 'file-loader',
+	            options: {
+		            name: 'static/media/[name].[ext]',
+		            publicPath: '../'
+	            }
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: path.join('static', 'fonts/[name].[ext]')
-                }
+	            loader: 'file-loader',
+	            options: {
+		            name: 'static/fonts/[name].[ext]',
+		            publicPath: '../'
+	            }
             },
         ]
     }

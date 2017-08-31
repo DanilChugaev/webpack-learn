@@ -1,8 +1,8 @@
-import style from './assets/index.scss';
+import style from './assets/scss/index.scss';
 
-export default (text = 'hello sevd') => {
+export default function() {
     const element = document.createElement('div');
-    element.innerHTML = text;
+    element.innerHTML = 'hello sevd';
     element.className = style.green;
 
     return element;

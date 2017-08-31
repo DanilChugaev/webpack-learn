@@ -1,4 +1,4 @@
 import component from './component';
-import './assets/index.scss';
+import './assets/scss/index.scss';
 
 document.body.appendChild(component());

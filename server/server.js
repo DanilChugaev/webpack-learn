@@ -18,6 +18,12 @@ app.use(webpackMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler));
 
+app.get('/get', (req, res) => {
+	res.set('Access-Control-Allow-Origin', '*')
+	res.sendFile(path.join(__dirname, '../json/table-settings.json'))
+	console.log('blablabla')
+});
+
 app.get('/*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../dist/index.html'))
 });

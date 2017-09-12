@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Dessert (100g serving)",
+    "align": "center",
+    "value": "name",
+    "caption": "caption 1"
+  },
+  {
+    "text": "Calories",
+    "align": "center",
+    "value": "calories",
+    "caption": "caption 2"
+  },
+  {
+    "text": "Fat (g)",
+    "align": "center",
+    "value": "fat",
+    "caption": "caption 3"
+  },
+  {
+    "text": "Carbs (g)",
+    "align": "center",
+    "value": "carbs",
+    "caption": "caption 4"
+  },
+  {
+    "text": "Protein (g)",
+    "align": "center",
+    "value": "protein",
+    "caption": "caption 5"
+  },
+  {
+    "text": "Sodium (mg)",
+    "align": "center",
+    "value": "sodium",
+    "caption": "caption 6"
+  },
+  {
+    "text": "Calcium (%)",
+    "align": "center",
+    "value": "calcium",
+    "caption": "caption 7"
+  },
+  {
+    "text": "Iron (%)",
+    "align": "center",
+    "value": "iron",
+    "caption": "caption 8"
+  }
+]

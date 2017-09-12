@@ -18,10 +18,15 @@ app.use(webpackMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler));
 
-app.get('/get', (req, res) => {
+app.get('/get-headers', (req, res) => {
 	res.set('Access-Control-Allow-Origin', '*')
-	res.sendFile(path.join(__dirname, '../json/table-settings.json'))
-	console.log('blablabla')
+	res.sendFile(path.join(__dirname, '../json/table-headers.json'))
+	console.log('headers send')
+});
+app.get('/get-cells', (req, res) => {
+	res.set('Access-Control-Allow-Origin', '*')
+	res.sendFile(path.join(__dirname, '../json/table-cells.json'))
+	console.log('cells send')
 });
 
 app.get('/*', (req, res) => {
